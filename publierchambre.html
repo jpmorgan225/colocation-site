@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="publierchambre.css"/>
+  <title>Publier une chambre</title>
+</head>
+<body>
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="Accueil.html" class="nav-link">Retour à l'Accueil</a> 
+    </div>
+  </header>
+
+  <main>
+    <h1>Publier une chambre</h1>
+    <form id="publicationForm">
+      <label>Titre de l'annonce:
+        <input type="text" name="titre" required>
+      </label>
+
+      
+      <label class="pc">Prix:
+        <input type="text" name="prix" required>
+      </label>
+
+      <label>Quartier:
+        <input type="text" name="quartier" required>
+      </label>
+
+      <label>Disponibilité:
+        <select name="disponibilite">
+          <option>Immediate</option>
+          <option>Dans 1 semaine</option>
+          <option>Dans 1 mois</option>
+        </select>
+      </label>
+
+      <label>Type de chambre:
+        <select name="type_chambre">
+          <option>Chambre simple</option>
+          <option>Chambre double</option>
+          <option>Chambre triple</option>
+        </select>
+      </label>
+
+      <label>Photo principale:
+        <input type="file" name="image" accept="image/*" required>
+      </label>
+
+      <label>Photos supplémentaires:
+        <input type="file" name="images" accept="image/*" multiple>
+      </label>
+
+      <fieldset>
+        <legend>Règles :</legend>
+        <label><input type="checkbox" name="fumeur"> Autoriser fumeurs</label>
+        <label><input type="checkbox" name="animaux"> Autoriser animaux</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Équipements :</legend>
+        <label><input type="checkbox" name="equipements[]" value="wifi"> WiFi</label>
+        <label><input type="checkbox" name="equipements[]" value="climatisation"> Climatisation</label>
+        <label><input type="checkbox" name="equipements[]" value="cuisine equipée"> Cuisine</label>
+        <label><input type="checkbox" name="equipements[]" value="parking"> Parking</label>
+      </fieldset>
+
+      <label>Numéro de téléphone:
+        <input type="tel" name="num" placeholder="07 55 44 55 65" maxlength="14" required>
+      </label>
+
+      <label>Description:
+        <textarea name="description" required></textarea>
+      </label>
+
+      <button type="submit">Publier l'annonce</button>
+    </form>
+
+    <div id="confirmation" style="display: none;"></div>
+  </main>
+
+  <script src="publierchambre.js"></script>
+</body>
+</html>

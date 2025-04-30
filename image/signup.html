@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 40px 32px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(30,35,90,0.08);
+      width: 340px;
+    }
+    h2 { margin-bottom: 24px; color: #22223b; }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #ea5e5e;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 12px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #c53030;
+    }
+    .link {
+      display: block;
+      margin-top: 8px;
+      color: #4f46e5;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.97rem;
+    }
+    .message {
+      margin-bottom: 12px;
+      text-align: center;
+      font-size: 0.97rem;
+      display: none;
+    }
+    .message.error {
+      color: #b91c1c;
+      display: block;
+    }
+    .message.success {
+      color: #15803d;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <div class="message" id="message"></div>
+    <form id="signupForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required minlength="6" />
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required minlength="6" />
+      <button type="submit">Sign Up</button>
+    </form>
+    <a class="link" href="login.html">Already have an account? Login</a>
+  </div>
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      const messageDiv = document.getElementById('message');
+      
+      // Réinitialiser message
+      messageDiv.textContent = '';
+      messageDiv.className = 'message';
+
+      // Validation basique
+      if (!email || !password || !confirmPassword) {
+        messageDiv.textContent = 'Veuillez remplir tous les champs.';
+        messageDiv.classList.add('error');
+        return;
+      }
+      if (password !== confirmPassword) {
+        messageDiv.textContent = 'Les mots de passe ne correspondent pas.';
+        messageDiv.classList.add('error');
+        return;
+      }
+
+      // Récupérer la liste des utilisateurs existants
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+      if (users.find(u => u.email === email)) {
+        messageDiv.textContent = 'Cet email est déjà utilisé.';
+        messageDiv.classList.add('error');
+        return;
+      }
+
+      // Ajouter le nouvel utilisateur
+      users.push({ email, password });
+      localStorage.setItem('users', JSON.stringify(users));
+
+      // Succès
+      messageDiv.textContent = 'Inscription réussie ! Redirection vers la connexion...';
+      messageDiv.classList.add('success');
+      setTimeout(() => {
+        window.location.href = 'login.html';
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="rechcoloco.css">
+  <title>Profil colocataire</title>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+     
+    </div>
+  </header>
+
+  <main>
+    <section class="profil-coloc">
+      <h1 data-field="titre"></h1>
+    
+
+      <p class="description" data-field="description"></p>
+
+      <section class="detail-coloc">
+        <h2>À propos de la location</h2>
+        <ul class="detail-list">
+          <li><strong>Type :</strong> <span data-field="type_chambre"></span></li>
+          <li><strong>Quartier :</strong> <span data-field="quartier"></span></li>
+          <li><strong>Disponibilité :</strong> <span data-field="disponibilite"></span></li>
+          <li><strong>Prix :</strong> <span><span data-field="prix"></span> <span data-field="devise"></span></span></li>
+          <li><strong>Âge :</strong> <span data-field="age"></span> ans</li>
+        </ul>
+      </section>
+
+      <section class="regles">
+        <h2>Préférences du colocataire</h2>
+        <ul>
+          <li><strong>Fumeur :</strong> <span data-field="fumeur"></span></li>
+          <li><strong>Animaux :</strong> <span data-field="animaux"></span></li>
+          <li><strong>Occupation :</strong> <span data-field="occupation"></span></li>
+          <li><strong>Genre :</strong> <span data-field="genre"></span></li>
+        </ul>
+      </section>
+
+      <section class="photos">
+        <h2>Photos</h2>
+        <div class="photo-gallery" data-field="photos"></div>
+      </section>
+    </section>
+  </main>
+ 
+  <li><strong>Téléphone :</strong> <a href="#" data-field="numero" id="phone-link"><span data-field="numero-display"></span></a></span></li>
+  <!-- ✅ Lien vers JS séparé -->
+  <script src="rechcoloco.js"></script>
+</body>
+</html>

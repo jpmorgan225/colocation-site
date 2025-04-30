@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="rechcoloca.css">
+  <title>Détails de l'annonce | Manvie</title>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="nav-container">
+      <a href="rechcoloc.html" class="nav-link">Retour aux annonces</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="fiche-details">
+      <h1 id="annonce-titre"></h1>
+      <!-- Galerie d'images -->
+      <div class="gallery">
+        <div class="main-image-container">
+          <img id="main-image" src="" alt="Image principale de l'annonce" class="main-image">
+        </div>
+        <div class="additional-images"></div>
+      </div>
+
+      <!-- Informations principales -->
+      <ul class="main-info">
+        <li><strong>Quartier : </strong><span data-field="quartier"></span></li>
+        <li><strong>Type de chambre : </strong><span data-field="type_chambre"></span></li>
+        <li><strong>Disponibilité : </strong><span data-field="disponibilite"></span></li>
+        <li><strong>Équipements : </strong><ul data-field="equipements"></ul></li>
+      </ul>
+
+      <!-- Règles de colocation -->
+      <section class="rules-section">
+        <h2>Règles :</h2>
+        <ul>
+          <li><strong>Fumeur : </strong><span data-field="fumeur"></span></li>
+          <li><strong>Animaux : </strong><span data-field="animaux"></span></li>
+          <li><strong>Occupation : </strong><span data-field="occupation"></span></li>
+          <li><strong>Genre : </strong><span data-field="genre"></span></li>
+        </ul>
+      </section>
+
+      <!-- Contact et description -->
+      <section class="details-section">
+        <h2>Description complète :</h2>
+        <p><span data-field="description"></span></p>
+        <h3>Contact :</h3>
+        <p>Téléphone : <a href="#" data-field="numero" id="phone-link"><span data-field="numero-display"></span></a></p>
+      </section>
+    </section>
+  </main>
+
+  <script src="rechcoloca.js"></script>
+</body>
+</html>

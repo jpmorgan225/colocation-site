@@ -1,0 +1,205 @@
+/* ===== VARIABLES ===== */
+:root {
+  --primary-color: #ff6f61;
+  --secondary-color: #f79d1f;
+  --text-color: #333; /* Gris foncé comme dans l'original */
+  --light-color: #f8f8f8;
+  --white: #fff;
+  --footer-color: #ea5e5e;
+  --border-radius: 10px;
+  --transition: all 0.3s ease;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--white);
+  color: var(--text-color);
+  line-height: 1.6;
+  text-decoration: none ; /* Aucun soulignement */
+  display : flex;
+  flex-direction: column;
+  min-height: 100vh; /* Pour le footer en bas de page */
+  
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: var(--primary-color);
+  padding: 15px 20px;
+  color: var(--white);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+}
+
+.nav-container {
+  display: flex;
+  gap: 20px;
+  margin-right: 5px;
+}
+
+.nav-container a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+  margin-top: -30px;
+}
+
+.nav-container a:hover {
+  opacity: 0.8;
+}
+
+/* ===== MAIN CONTENT ===== */
+.container {
+  padding: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* ===== CARD STYLES ===== */
+.colocation-card {
+  display: flex;
+  background: var(--light-color);
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.colocation-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: var(--border-radius);
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h3 {
+  margin: 10px 0;
+  color: var(--secondary-color);
+  font-size: 20px;
+}
+
+.location {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.price {
+  background: var(--secondary-color);
+  padding: 5px 15px;
+  color: var(--white);
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.info p {
+  margin: 8px 0;
+  color: #555; /* Gris moyen pour le texte secondaire */
+}
+
+.info div:last-child {
+  color: #666; /* Gris pour les détails */
+  margin-top: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--footer-color);
+  color: var(--white);
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 13px;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+.main-content{
+  flex: 1 0 auto; /* Permet au contenu principal de prendre l'espace restant */
+  width: 100%;
+}
+.card-link{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .colocation-card {
+    flex-direction: column;
+  }
+  
+  .colocation-card img {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+h2{
+  text-decoration:none !important;
+  color:black;
+}
+.main-footer{
+  display: flex;
+}
+  /* publierchambre.css */
+input:invalid, textarea:invalid {
+  border-color: #ff4444;
+  box-shadow: 0 0 3px #ff444466;
+}
+
+input:invalid + .error-message {
+  display: block;
+  color: #ff4444;
+  font-size: 0.8em;
+  margin-top: -15px;
+  margin-bottom: 10px;
+}
+/* Animation pour les nouvelles annonces */
+@keyframes highlight {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.card.highlight {
+  animation: highlight 1s ease;
+  border: 2px solid #ff6f61;
+}
+.highlight {
+  animation: pulse 1.5s infinite;
+  border: 2px solid #ff6f61;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}

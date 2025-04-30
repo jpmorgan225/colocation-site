@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "type": "colocataire",
+    "titre": "Jean, 24 ans - M'badon",
+    "quartier": "m'badon",
+    "prix": 70000,
+    "devise": "FCFA",
+    "description": "Étudiant en économie, calme et sociable, cherche une colocation conviviale à M'badon.",
+    "image": "image/avatar-homme1.jpg",
+    "disponibilite": "Immédiate",
+    "type_chambre": "Chambre double",
+    "equipements": [],
+    "photos": ["image/jean.jpeg"],
+    "regles": {
+      "fumeur": false,
+      "animaux": false,
+      "occupation": ["Étudiant"],
+      "genre": ["Homme"]
+    },
+    "details": {
+      "age": 24,
+      "lien": "image/rechcoloca.html?id=1",
+      "numero": "+2250701234567"
+    }
+  },
+  {
+    "id": 2,
+    "type": "colocataire",
+    "titre": "Fatou, 27 ans - M'pouto",
+    "quartier": "m'pouto",
+    "prix": 60000,
+    "devise": "FCFA",
+    "description": "Professionnelle dans le marketing, recherche une colocation tranquille à M'pouto.",
+    "image": "image/avatar-femme1.jpg",
+    "disponibilite": "Immédiate",
+    "type_chambre": "Chambre double",
+    "equipements": [],
+    "photos": ["image/natural-saramaya-femme-noirr-afro-coiffure-cheveux-crepus-defrises-3.jpg"],
+    "regles": {
+      "fumeur": false,
+      "animaux": true,
+      "occupation": ["Professionnel"],
+      "genre": ["Femme"]
+    },
+    "details": {
+      "age": 27,
+      "lien": "image/rechcoloca.html?id=2",
+      "numero": "+2250702345678"
+    }
+  },
+  {
+    "id": 3,
+    "type": "colocataire", 
+    "titre": "Marc, 29 ans - Angré",
+    "quartier": "angré",
+    "prix": 80000,
+    "devise": "FCFA",
+    "description": "Travailleur freelance, aime les ambiances calmes et bien rangées. Cherche un logement à Angré.",
+    "image": "image/avatar-homme2.jpg",
+    "disponibilite": "Immédiate",
+    "type_chambre": "Chambre simple",
+    "equipements": [],
+    "photos": ["image/marc.jpg"],
+    "regles": {
+      "fumeur": false,
+      "animaux": false,
+      "occupation": ["Professionnel"],
+      "genre": ["Homme"]
+    },
+    "details": {
+      "age": 29,
+      "lien": "image/rechcoloca.html?id=3",
+      "numero": "+2250703456789"
+    }
+  },
+  {
+    "id": 4,
+    "type": "colocataire",
+    "titre": "Aminata, 22 ans - M'pouto",
+    "quartier": "m'pouto",
+    "prix": 60000,
+    "devise": "FCFA",
+    "description": "Étudiante en droit, ouverte et amicale, souhaite partager un logement à proximité des transports.",
+    "image": "image/avatar-femme2.jpg",
+    "disponibilite": "Immédiate",
+    "type_chambre": "Chambre double",
+    "equipements": [],
+    "photos": ["image/3e130647b92a3fc01f25b422bbc706f8.jpg"],
+    "regles": {
+      "fumeur": true,
+      "animaux": false,
+      "occupation": ["Étudiant"],
+      "genre": ["Femme"]
+    },
+    "details": {
+      "age": 22,
+      "lien": "image/rechcoloca.html?id=4",
+      "numero": "+2250704567890"
+    }
+  }
+]

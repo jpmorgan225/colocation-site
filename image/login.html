@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 40px 32px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(30,35,90,0.08);
+      width: 340px;
+    }
+    h2 { margin-bottom: 24px; color: #22223b; }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #ea5e5e;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-bottom: 12px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #c53030;
+    }
+    .link {
+      display: block;
+      margin-top: 8px;
+      color: #4f46e5;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.97rem;
+    }
+    .message {
+      margin-bottom: 12px;
+      text-align: center;
+      font-size: 0.97rem;
+      display: none;
+    }
+    .message.error {
+      color: #b91c1c;
+      display: block;
+    }
+    .message.success {
+      color: #15803d;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <div class="message" id="message"></div>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required minlength="6" />
+      <button type="submit">Login</button>
+    </form>
+    <a class="link" href="signup.html">Don't have an account? Sign up</a>
+  </div>
+  <script>
+    // Vérifier si l'utilisateur est déjà connecté
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = localStorage.getItem('user');
+      if (user) {
+        // Redirection vers le dashboard
+        window.location.href = 'dashboard.html';
+      }
+    });
+
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const messageDiv = document.getElementById('message');
+
+      // Réinitialiser message
+      messageDiv.textContent = '';
+      messageDiv.className = 'message';
+
+      // Validation basique
+      if (!email || !password) {
+        messageDiv.textContent = 'Veuillez remplir tous les champs.';
+        messageDiv.classList.add('error');
+        return;
+      }
+
+      // Simuler appel API ou vérifier localStorage des comptes enregistrés
+      // Exemple : stockage d'un compte de test
+      const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');
+      const found = storedUsers.find(u => u.email === email && u.password === password);
+
+      if (found) {
+        // Connexion réussie : sauvegarde dans localStorage
+        localStorage.setItem('user', JSON.stringify({ email }));
+        messageDiv.textContent = 'Connexion réussie ! Redirection...';
+        messageDiv.classList.add('success');
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 1500);
+      } else {
+        messageDiv.textContent = 'Email ou mot de passe invalide.';
+        messageDiv.classList.add('error');
+      }
+    });
+  </script>
+</body>
+</html>

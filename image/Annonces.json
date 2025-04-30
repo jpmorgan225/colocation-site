@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "titre": "Studio colocation à M'badon",
+    "prix": 70000,
+    "devise": "FCFA/mois",
+    "quartier": "M'badon",
+    "description": "Bienvenue au quartier de 'Riviera Lumière', studio lumineux avec accès à toutes commodités.",
+    "image": "pexels-aravindkali-31452493.jpg",
+    "disponibilite": "Immédiate",
+    "type_chambre": "Chambre double",
+    "equipements": ["Wifi", "Parking", "Cuisine équipée"],
+    "photos": [
+      "image/bhy.jpg",
+      "image/azert.jpg"
+    ],
+    "regles": {
+      "fumeur": false,
+      "animaux": false,
+      "occupation": ["Étudiant", "Professionnel"],
+      "genre": ["Femme", "Non-binaire"]
+    },
+    "contact": {
+      "numero": "+225 07 01 23 45 67",
+      "proprietaire": "M. Konan"
+    }
+  },
+  {
+    "id": 2,
+    "titre": "Studio colocation à M'pouto",
+    "prix": 60000,
+    "devise": "FCFA/mois",
+    "quartier": "M'pouto",
+    "description": "Bienvenue au quartier 'M'pouto', appartement moderne proche du centre ville.",
+    "image": "pexels-aravindkali-31452363.jpg",
+    "disponibilite": "Dans 1 semaine",
+    "type_chambre": "Chambre double",
+    "equipements": ["Ascenseur", "Gardien", "Balcon"],
+    "photos": [
+      "image/cvboiuy.jpg",
+      "image/hh.jpg"
+    ],
+    "regles": {
+      "fumeur": false,
+      "animaux": false,
+      "occupation": ["Étudiant", "Professionnel"],
+      "genre": ["Femme", "Non-binaire"]
+    },
+    "contact": {
+      "numero": "+225 05 43 21 09 87",
+      "proprietaire": "Mme Traoré"
+    }
+  },
+  {
+    "id": 3,
+    "titre": "Studio colocation à Angré",
+    "prix": 80000,
+    "devise": "FCFA/mois",
+    "quartier": "Angré",
+    "description": "Bienvenue au quartier 'Angré Vert Oasis', espace calme et verdoyant.",
+    "image": "pexels-pixabay-164595.jpg",
+    "disponibilite": "Immédiate",
+    "type_chambre": "Chambre simple",
+    "equipements": ["Climatisation", "Buanderie", "Salle de sport"],
+    "photos": [
+      "image/lllllllkjhg.jpg",
+      "image/salon-avec-cheminee-appartement-avant-travaux_5865539.webp"
+    ],
+    "regles": {
+      "fumeur": false,
+      "animaux": false,
+      "occupation": ["Étudiant", "Professionnel"],
+      "genre": ["Femme", "Non-binaire"]
+    },
+    "contact": {
+      "numero": "+225 01 02 03 04 05",
+      "proprietaire": "M. Kouassi"
+    }
+  },
+  {
+    "id": 4,
+    "titre": "Studio colocation à M'pouto",
+    "prix": 60000,
+    "devise": "FCFA/mois",
+    "quartier": "M'pouto",
+    "description": "Second studio disponible dans le quartier M'pouto, parfait pour étudiants.",
+    "image": "pexels-jaelen-kempson-2151267602-31602322.jpg",
+    "disponibilite": "Immédiate",
+    "type_chambre": "Chambre double",
+    "equipements": ["Internet haut débit", "Sécurité 24/7"],
+    "photos": [
+      "image/sssssssssssss.jpg",
+      "image/Untitled.jpg"
+    ],
+    "regles": {
+      "fumeur": false,
+      "animaux": false,
+      "occupation": ["Étudiant", "Professionnel"],
+      "genre": ["Femme", "Non-binaire"]
+    },
+    "contact": {
+      "numero": "+225 07 89 45 12 36",
+      "proprietaire": "Mme Diabaté"
+    }
+  }
+]
